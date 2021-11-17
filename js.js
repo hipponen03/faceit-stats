@@ -15,10 +15,11 @@ $.ajax({
             alert('User not found!')
                 }
     }
-}).then(({ nickname, player_id }) => {
+}).then(({ nickname, player_id, games }) => {
 resultContainer.innerHTML = `
-PlayerName: ${nickname}
-PlayerID: ${player_id}`;
+PlayerName: ${nickname} ||
+PlayerID: ${player_id} ||
+Elo: ${games.csgo.faceit_elo}`;
 }) 
 };
 btn.addEventListener("click", (event) => {
