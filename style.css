@@ -2,9 +2,9 @@ giut * {
   font-family: "Roboto", sans-serif;
 }
 
-.test {
+body{
  
-  background-image: url(wall.png);
+  background-image: url(/img/wall.png);
   background-attachment: fixed;
   background-repeat: no-repeat; 
   background-size: cover; 
@@ -18,19 +18,57 @@ giut * {
   color: white;
   margin: 70px 550px 100px 550px;
   text-transform: uppercase;
-
   text-align: center;
 
 }
 
 .sisend{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+  height: 7vh;
   text-align: center;
 }
 
-.tulemused{
-  color:white;
+input::placeholder{
+  color:black;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.search[type=text]{
+  width: 35vw;
+  height: 7vh;
+  box-sizing: border-box;
+  border: 3px solid white;
+  transition: 0.5s;
+  outline: none;
+}
+
+
+
+#btn{
+  background-color: rgb(158, 255, 30);
+  border: none;
+  height: 7vh;
+  color: white;
+  margin-left: 2vw;
+  font-size: 36px;
+  cursor: pointer;
+  width: 5vw;
+  max-height: 7vh;
+
+}
+#btn:hover {
+  background-color: rgb(127, 216, 10);
 }
 
 pre {
   margin: 0.3em 0px;
+}
+
+
+
+.tulemused{
+  color:white;
 }
