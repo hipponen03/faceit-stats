@@ -2,6 +2,35 @@ giut * {
   font-family: "Roboto", sans-serif;
 }
 
+.test {
+ 
+  background-image: url(wall.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  margin: 0px;
+  padding: 0px;
+
+
+}
+
+.faceit-title{
+  color: white;
+  margin: 70px 550px 100px 550px;
+  text-transform: uppercase;
+
+  text-align: center;
+
+}
+
+.sisend{
+  text-align: center;
+}
+
+.tulemused{
+  color:white;
+}
+
 pre {
   margin: 0.3em 0px;
 }
