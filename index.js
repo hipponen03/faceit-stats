@@ -1,6 +1,7 @@
 const btn = document.getElementById("btn");
 const resultContainer = document.getElementById("results");
 const resultContainer2 = document.getElementById("results2");
+
 function supamarobrodas(bub) {
   var nick = document.getElementById("input").value;
   $.ajax({
@@ -21,9 +22,9 @@ function supamarobrodas(bub) {
       }
     },
   }).then(({ avatar, nickname, player_id, games }) => {
-    resultContainer.innerHTML = ` <img style="margin-top: 25px; display:block; margin-left: auto; margin-right: auto; width: 200px; height: 200px" src=${avatar}>
-    Nickname: ${nickname} ||
-Elo: ${games.csgo.faceit_elo}`;
+    resultContainer.innerHTML = ` <img  class="profile-picture"  src=${avatar}>
+    <h3 class="nickname"> Nickname: ${nickname} </h3><br>
+    <h3 class="elo">Elo: ${games.csgo.faceit_elo} </h3>`;
 var id = player_id;
   
   $.ajax({
@@ -45,20 +46,32 @@ var id = player_id;
     },
   }).then(({ lifetime, segments }) => {
     resultContainer2.innerHTML = `
+
 Lifetime: <br />
-<pre> AVG Headshots: ${lifetime["Average Headshots %"]} </pre>
-<pre> AVG K/D Ratio: ${lifetime["Average K/D Ratio"]} </pre>
-<pre> Matches: ${lifetime.Matches} </pre>
+<p class="test-one">AVG Headshots: ${lifetime["Average Headshots %"]}% </p>
+<p> AVG K/D Ratio: ${lifetime["Average K/D Ratio"]} </p>
+<p> Matches: ${lifetime.Matches} </p>
 <pre> Winrate: ${lifetime["Win Rate %"]}% </pre>
 <br />
-<img src=${segments[0].img_regular}><br>
+<img  src=${segments[0].img_regular}><br>
 Map: ${segments[0].label}
 <pre> Winrate: ${segments[0].stats["Win Rate %"]}% </pre>
 <pre> AVG K/D Ratio: ${segments[0].stats["Average K/D Ratio"]} </pre>
 <pre> AVG K/R Ratio: ${segments[0].stats["Average K/R Ratio"]} </pre>
+
 `;
   });
 })};
-btn.addEventListener("click", (event) => {
-  supamarobrodas();
+
+
+btn.addEventListener("click", (e) => {
+
+
+    document.getElementById('sisend').classList.add('myClass');
+    document.getElementById('faceit-title').classList.add('faceit-title-after');
+    document.getElementById('input').classList.add('search-after');
+    document.getElementById('btn').classList.add('nupp');
+
+    supamarobrodas();
+
 });
