@@ -3,8 +3,7 @@
 }
 
 body{
-  overflow: hidden;
- 
+  overflow: hidden; 
   background-image: url(/img/wall.png);
   background-attachment: fixed;
   background-repeat: no-repeat; 
@@ -27,6 +26,7 @@ body{
   color: white;
   margin: 70px 550px 40px 550px;
   text-transform: uppercase;
+  transition-duration: 0.5s;
   text-align: center;
 
 }
@@ -45,6 +45,7 @@ body{
   display: flex;
   justify-content: right;
   margin:  0 2vw 0 0;
+  transition-duration: 0.5s;
 }ˇ
 
 
@@ -64,6 +65,7 @@ input::placeholder{
 }
 
 .search-after{
+  transition-duration: 0.5s;
   width: 20vw;
   height: 4vh;
   box-sizing: border-box;
@@ -73,6 +75,7 @@ input::placeholder{
 }
 
 .nupp{
+  transition-duration: 0.5s;
   background-color: rgb(158, 255, 30);
   border: none;
   height: 4vh;
@@ -144,5 +147,11 @@ pre {
   color: white;
   justify-content: right;
   float: right;
+}
+
+.pepsi{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
